@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio — Base SPA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="container header" role="banner">
+  <div style="display:flex;align-items:center;gap:12px">
+    <div class="brand">Mi Portafolio</div>
+    <button class="hamburger" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </div>
+  <nav role="navigation" aria-label="Main navigation">
+    <ul id="navList">
+      <li><a href="#inicio" data-target="inicio" class="nav-link">INICIO</a></li>
+      <li><a href="#proyectos" data-target="proyectos" class="nav-link">PROYECTOS</a></li>
+      <li><a href="#certificados" data-target="certificados" class="nav-link">CERTIFICADOS</a></li>
+    </ul>
+  </nav>
+  <div class="socials" aria-hidden="false" id="socialIcons">
+    <!-- íconos visibles en header (solo iconos) -->
+    <a class="icon-btn" href="#" title="GitHub" aria-label="GitHub">G</a>
+    <a class="icon-btn" href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
+    <a class="icon-btn" href="#" title="Twitter" aria-label="Twitter">t</a>
+  </div>
+</header>
+
+<main class="container main" id="app" role="main">
+  <section id="inicio" class="section active slide-in" aria-labelledby="inicio-heading">
+    <div class="hero card">
+      <div class="profile-left">
+        <div class="avatar" id="avatar">
+          <img alt="Foto de perfil" id="avatarImg" />
+        </div>
+        <div class="name" id="profileName"></div>
+        <div class="role" id="profileRole"></div>
+        <div class="actions">
+          <button class="btn primary" id="contactBtn">Contactar</button>
+          <button class="btn ghost" id="downloadCv">Descargar CV</button>
+        </div>
+      </div>
+      <div class="profile-right">
+        <h2 id="inicio-heading">Hola, soy <span id="introName"></span></h2>
+        <p id="profileBio"></p>
+        <div style="margin-top:8px">
+          <strong style="color:var(--muted)">Habilidades clave:</strong>
+          <div id="skills" style="margin-top:8px;display:flex;flex-wrap:wrap;gap:8px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="section" aria-labelledby="proyectos-heading">
+    <h3 id="proyectos-heading">Proyectos</h3>
+    <div class="grid" id="projectsGrid"></div>
+  </section>
+
+  <section id="certificados" class="section" aria-labelledby="certificados-heading">
+    <h3 id="certificados-heading">Certificados</h3>
+    <div id="certsList" class="grid"></div>
+  </section>
+
+  <section id="redes" class="section" aria-labelledby="redes-heading">
+    <h3 id="redes-heading">Redes Sociales</h3>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px" id="socialList"></div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">Plantilla base — Single Page Application minimal</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

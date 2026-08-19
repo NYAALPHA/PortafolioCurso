@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "name": "Tu Nombre",
+    "phone": "+51 999 999 999"
+  },
+  "banners": [
+    {
+      "title": "Duplica tus datos",
+      "description": "Compra un combo y navega con más libertad."
+    },
+    {
+      "title": "Combos para ti",
+      "description": "Elige el paquete que mejor se adapta a tu día."
+    },
+    {
+      "title": "Siempre conectado",
+      "description": "Disfruta tus beneficios durante todo el mes."
+    }
+  ],
+  "account": {
+    "balance": "S/ 25.00",
+    "expires": "30/08/2026",
+    "plan": "Incluye un combo",
+    "usage": [
+      {
+        "type": "DATOS",
+        "usedPercent": 64,
+        "remaining": "3.6 GB libres",
+        "color": "#5474ee"
+      },
+      {
+        "type": "VOZ",
+        "usedPercent": 38,
+        "remaining": "620 min libres",
+        "color": "#36b99a"
+      },
+      {
+        "type": "SMS",
+        "usedPercent": 72,
+        "remaining": "84 SMS libres",
+        "color": "#f3a640"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>Clon T - Mi cuenta</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="user-summary">
+        <span class="avatar" id="userInitials" aria-hidden="true">TN</span>
+        <div>
+          <p class="eyebrow">Hola</p>
+          <h1 id="userName">Tu Nombre</h1>
+          <p class="phone" id="userPhone">+51 999 999 999</p>
+        </div>
+      </div>
+      <div class="header-actions" aria-label="Acciones de usuario">
+        <button class="icon-button" id="notificationButton" type="button" aria-label="Notificaciones">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+          <span class="notification-dot" aria-hidden="true"></span>
+        </button>
+        <button class="icon-button" id="menuButton" type="button" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="banner-section" aria-labelledby="promotionsTitle">
+        <div class="section-heading">
+          <h2 id="promotionsTitle">Promociones</h2>
+          <div class="banner-dots" id="bannerDots" aria-label="Selector de banners"></div>
+        </div>
+        <div class="banner-track" id="bannerTrack"></div>
+      </section>
+
+      <section class="balance-card" aria-labelledby="balanceTitle">
+        <div class="balance-header">
+          <div>
+            <p class="card-label" id="balanceTitle">SALDO</p>
+            <p class="balance-amount" id="balanceAmount">S/ 0.00</p>
+          </div>
+          <button class="buy-button" id="buyButton" type="button">Compra más</button>
+        </div>
+
+        <div class="plan-info">
+          <div>
+            <p class="expiration" id="expirationDate">Vence 30/08/2026</p>
+            <p class="plan-name" id="planName">Incluye un combo</p>
+          </div>
+          <span class="plan-status">Activo</span>
+        </div>
+
+        <div class="usage-grid" id="usageGrid" aria-label="Consumo del combo"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegación principal">
+      <a class="bottom-nav-item active" href="#inicio">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zM9 21v-6h6v6"/></svg>
+        <span>Inicio</span>
+      </a>
+      <a class="bottom-nav-item" href="#ayuda">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4.1 1.9c-1 .8-1.6 1.3-1.6 2.6M12 17h.01"/></svg>
+        <span>Ayuda</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

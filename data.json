@@ -1,0 +1,22 @@
+{
+  "profile": {
+    "name": "Tu Nombre",
+    "role": "Ingeniero/a de Software",
+    "bio": "Soy un desarrollador con experiencia en construir aplicaciones web, APIs y sistemas escalables. Aquí muestro una selección de proyectos y certificaciones.",
+    "avatar": "",
+    "skills": ["JavaScript", "HTML", "CSS", "React", "Node.js"]
+  },
+  "projects": [
+    {"title":"Clon T","description":"Prototipo móvil de gestión de saldo, combos y consumo de datos.","link":"proyectos/Clon%20T/index.html"},
+    {"title":"Proyecto A","description":"Breve descripción del proyecto A.","link":"#"},
+    {"title":"Proyecto B","description":"Breve descripción del proyecto B.","link":"#"}
+  ],
+  "certificates": [
+    {"title":"Certificado X","issuer":"Entidad Y","year":"2024","link":"#"}
+  ],
+  "socials":[
+    {"name":"GitHub","url":"#"},
+    {"name":"LinkedIn","url":"#"},
+    {"name":"Twitter","url":"#"}
+  ]
+}
