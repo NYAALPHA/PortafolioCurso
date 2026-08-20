@@ -1,0 +1,30 @@
+{
+  "categories": ["Todos", "Ciencia", "Noticias", "Películas", "Entretenimiento", "Historia", "Tecnología"],
+  "channels": [
+    {"name":"Veritasium", "logo":"Resources/canal/veritasium/logo.png", "hasNew":true},
+    {"name":"BN Periodismo", "logo":"Resources/canal/bn%20periodismo/logo.png", "hasNew":true},
+    {"name":"Comentando Películas", "logo":"Resources/canal/comentando%20peliculas/logo.png", "hasNew":false},
+    {"name":"enchufeTV", "logo":"Resources/canal/enchufe%20tv/logo.png", "hasNew":true},
+    {"name":"DW", "logo":"Resources/canal/dw/logo.png", "hasNew":true},
+    {"name":"Historia Geopolítica", "logo":"Resources/canal/historia%20geopolitica/logo.png", "hasNew":false},
+    {"name":"Moviegasm", "logo":"Resources/canal/moviegasm/logo.png", "hasNew":false},
+    {"name":"Charles", "logo":"Resources/canal/charles/logo.png", "hasNew":true}
+  ],
+  "videos": [
+    {"title":"La ciencia detrás de los objetos cotidianos", "channel":"Veritasium", "views":"2,4 M de vistas", "date":"hace 2 días", "category":"Ciencia", "thumbnail":"Resources/canal/veritasium/portada-1.png", "logo":"Resources/canal/veritasium/logo.png", "video":""},
+    {"title":"Las noticias que debes conocer hoy", "channel":"BN Periodismo", "views":"850 mil vistas", "date":"hace 5 horas", "category":"Noticias", "thumbnail":"Resources/canal/bn%20periodismo/portada-1.png", "logo":"Resources/canal/bn%20periodismo/logo.png", "video":""},
+    {"title":"Comentando películas que marcaron una época", "channel":"Comentando Películas", "views":"1,1 M de vistas", "date":"hace 1 día", "category":"Películas", "thumbnail":"Resources/canal/comentando%20peliculas/portada-1.png", "logo":"Resources/canal/comentando%20peliculas/logo.png", "video":""},
+    {"title":"El sketch que nadie esperaba", "channel":"enchufeTV", "views":"4,8 M de vistas", "date":"hace 3 días", "category":"Entretenimiento", "thumbnail":"Resources/canal/enchufe%20tv/portada-1.png", "logo":"Resources/canal/enchufe%20tv/logo.png", "video":""},
+    {"title":"Una mirada al mundo que está cambiando", "channel":"DW", "views":"620 mil vistas", "date":"hace 8 horas", "category":"Noticias", "thumbnail":"Resources/canal/dw/portada-1.png", "logo":"Resources/canal/dw/logo.png", "video":"Resources/canal/dw/portada-2-video.mp4"},
+    {"title":"Historia y geopolítica explicadas", "channel":"Historia Geopolítica", "views":"390 mil vistas", "date":"hace 4 días", "category":"Historia", "thumbnail":"Resources/canal/historia%20geopolitica/portada-1.png", "logo":"Resources/canal/historia%20geopolitica/logo.png", "video":""},
+    {"title":"El cine visto desde otra perspectiva", "channel":"Moviegasm", "views":"710 mil vistas", "date":"hace 6 días", "category":"Películas", "thumbnail":"Resources/canal/moviegasm/portada-1.png", "logo":"Resources/canal/moviegasm/logo.png", "video":"Resources/canal/moviegasm/portada-1-video.mp4"},
+    {"title":"Preguntas difíciles, respuestas claras", "channel":"Charles", "views":"980 mil vistas", "date":"hace 1 semana", "category":"Ciencia", "thumbnail":"Resources/canal/charles/portada-1.png", "logo":"Resources/canal/charles/logo.png", "video":""}
+  ],
+  "shorts": [
+    {"title":"Un dato que cambiará tu forma de ver el mundo", "channel":"DW", "views":"1,2 M de vistas", "thumbnail":"Resources/canal/dw/portada-2.png", "video":"Resources/canal/dw/short-1.mp4"},
+    {"title":"La explicación más rápida de la historia", "channel":"Charles", "views":"540 mil vistas", "thumbnail":"Resources/canal/charles/portada-1.png", "video":""},
+    {"title":"¿Puedes resolver este reto?", "channel":"Moviegasm", "views":"320 mil vistas", "thumbnail":"Resources/canal/moviegasm/portada-1.png", "video":""},
+    {"title":"Un minuto de contexto", "channel":"BN Periodismo", "views":"190 mil vistas", "thumbnail":"Resources/canal/bn%20periodismo/portada-1.png", "video":""},
+    {"title":"El experimento en vertical", "channel":"Veritasium", "views":"760 mil vistas", "thumbnail":"Resources/canal/veritasium/portada-1.png", "video":""}
+  ]
+}

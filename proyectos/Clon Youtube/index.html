@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clon YouTube</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Abrir menú">☰</button>
+    <a class="youtube-brand" href="#inicio" aria-label="Inicio de YouTube">
+      <span class="brand-mark">▶</span><span>YouTube</span>
+    </a>
+    <form class="search-form" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="Buscar" aria-label="Buscar videos">
+      <button class="search-button" type="submit" aria-label="Buscar">⌕</button>
+    </form>
+    <div class="top-actions">
+      <button class="icon-button" id="createButton" type="button" aria-label="Crear">＋</button>
+      <button class="icon-button" id="notificationButton" type="button" aria-label="Notificaciones">♧</button>
+      <img class="profile-image" src="Resources/img/Foto_Perfil.jpg" alt="Perfil">
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <nav aria-label="Navegación principal">
+        <a class="side-link active" href="#inicio">⌂ <span>Inicio</span></a>
+        <a class="side-link" href="#shorts">▣ <span>Shorts</span></a>
+        <a class="side-link subscriptions-link" href="#suscripciones">▤ <span>Suscripciones</span><span class="side-arrow">›</span></a>
+        <div class="subscriptions" aria-label="Canales suscritos">
+          <p class="sidebar-title">Suscripciones</p>
+          <div id="channelList"></div>
+          <button class="show-more" id="showMoreChannels" type="button">⌄ <span>Mostrar más</span></button>
+        </div>
+      </nav>
+      <div class="side-divider"></div>
+      <p class="sidebar-title">Tú</p>
+      <a class="side-link" href="#historial">◷ <span>Historial</span></a>
+      <a class="side-link" href="#playlists">▱ <span>Playlists</span></a>
+      <a class="side-link" href="#videos">▻ <span>Tus videos</span></a>
+    </aside>
+
+    <main class="content" id="inicio">
+      <div class="category-row" id="categoryRow" aria-label="Categorías"></div>
+      <section class="content-section" aria-labelledby="videosTitle">
+        <div class="section-header">
+          <h1 id="videosTitle">Recomendados</h1>
+          <span class="result-count" id="resultCount"></span>
+        </div>
+        <div class="video-grid" id="videoGrid"></div>
+      </section>
+      <section class="content-section shorts-section" id="shorts" aria-labelledby="shortsTitle">
+        <div class="section-header"><h2 id="shortsTitle"><img src="Resources/img/short.png" alt=""> Shorts</h2><button class="text-button" id="seeShortsButton" type="button">Ver todo</button></div>
+        <div class="shorts-grid" id="shortsGrid"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">×</button>
+      <div class="modal-media" id="modalMedia"></div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalMeta"></p>
+    </div>
+  </div>
+</body>
+</html>

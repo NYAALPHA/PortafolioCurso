@@ -42,6 +42,11 @@
             title: 'Clon T',
             description: 'Prototipo móvil de gestión de saldo, combos y consumo de datos.',
             link: 'proyectos/Clon%20T/index.html'
+          },
+          {
+            title: 'Clon Youtube',
+            description: 'Interfaz tipo YouTube con videos, Shorts, búsqueda y filtros responsive.',
+            link: 'proyectos/Clon%20Youtube/index.html'
           }
         ],
         certificates: [],
@@ -82,7 +87,17 @@
     (data.projects||[]).forEach(p=>{
       const card = document.createElement('article')
       card.className='card-small'
-      card.innerHTML = `<h4 style="margin:0 0 8px 0">${p.title}</h4><p style="margin:0 0 8px 0;color:var(--muted)">${p.description}</p><a href="${p.link}" style="color:var(--accent);font-weight:700">Ver</a>`
+      const title = document.createElement('h4')
+      title.style.margin = '0 0 8px 0'
+      title.textContent = p.title
+      const description = document.createElement('p')
+      description.style.cssText = 'margin:0 0 8px 0;color:var(--muted)'
+      description.textContent = p.description
+      const link = document.createElement('a')
+      link.href = p.link
+      link.textContent = 'Abrir proyecto'
+      link.style.cssText = 'color:var(--accent);font-weight:700'
+      card.append(title, description, link)
       grid.appendChild(card)
     })
   }

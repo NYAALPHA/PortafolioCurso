@@ -8,6 +8,7 @@
   },
   "projects": [
     {"title":"Clon T","description":"Prototipo móvil de gestión de saldo, combos y consumo de datos.","link":"proyectos/Clon%20T/index.html"},
+    {"title":"Clon Youtube","description":"Interfaz tipo YouTube con videos, Shorts, búsqueda y filtros responsive.","link":"proyectos/Clon%20Youtube/index.html"},
     {"title":"Proyecto A","description":"Breve descripción del proyecto A.","link":"#"},
     {"title":"Proyecto B","description":"Breve descripción del proyecto B.","link":"#"}
   ],
