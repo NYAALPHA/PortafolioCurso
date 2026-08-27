@@ -1,0 +1,97 @@
+{
+  "user": {
+    "name": "@ALPHA_PLANTAE_",
+    "status": "Envia mensajes a este mismo numero"
+  },
+  "filters": ["Todos", "No leidos", "Favoritos"],
+  "chats": [
+    {
+      "id": 1,
+      "type": "contacto",
+      "name": "@ALPHA_PLANTAE_",
+      "message": "https://www.facebook.com/share/1DHFVVdBDJ/",
+      "time": "18:36",
+      "unread": 0,
+      "favorite": false,
+      "online": false,
+      "avatar": "AP"
+    },
+    {
+      "id": 2,
+      "type": "grupo",
+      "name": "Curso IEEE Prototipos Web IA",
+      "message": "~ Jhordy Camacho: https://meet.google.com/",
+      "time": "18:03",
+      "unread": 1,
+      "favorite": true,
+      "online": true,
+      "avatar": "CW"
+    },
+    {
+      "id": 3,
+      "type": "comunidad",
+      "name": "IEEE ESPOCH Student Branch",
+      "message": "~Miguel: https://co.mbline.org/evento",
+      "time": "17:26",
+      "unread": 0,
+      "favorite": false,
+      "online": false,
+      "avatar": "IE"
+    },
+    {
+      "id": 4,
+      "type": "contacto",
+      "name": "Te",
+      "message": "Boris: Sabiendo que iba tar gratis en youtube",
+      "time": "Ayer",
+      "unread": 0,
+      "favorite": false,
+      "online": false,
+      "avatar": "TE"
+    },
+    {
+      "id": 5,
+      "type": "contacto",
+      "name": "Kikark",
+      "message": "Sticker",
+      "time": "miercoles",
+      "unread": 0,
+      "favorite": false,
+      "online": false,
+      "avatar": "KI"
+    },
+    {
+      "id": 6,
+      "type": "contacto",
+      "name": "Johann",
+      "message": "solo los ojos, lo demas no se parece",
+      "time": "martes",
+      "unread": 0,
+      "favorite": false,
+      "online": false,
+      "avatar": "JO"
+    },
+    {
+      "id": 7,
+      "type": "contacto",
+      "name": "Germancho",
+      "message": "?",
+      "time": "lunes",
+      "unread": 0,
+      "favorite": false,
+      "online": false,
+      "avatar": "GE"
+    },
+    {
+      "id": 8,
+      "type": "contacto",
+      "name": "+593 99 119 4932",
+      "message": "Invitacion a grupo de WhatsApp",
+      "time": "lunes",
+      "unread": 0,
+      "favorite": false,
+      "online": false,
+      "avatar": "+5"
+    }
+  ]
+}

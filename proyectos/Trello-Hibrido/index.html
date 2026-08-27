@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trello Hibrido | Organizador de Tareas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Hybrid Workflow</p>
+      <h1>Tablero Kanban + Scrum</h1>
+      <p class="subtitle">Organiza tesis, proyectos y mantenimiento en sprints visuales.</p>
+    </div>
+    <div class="topbar-actions">
+      <button id="openTaskModal" class="btn" type="button">Agregar tarea</button>
+      <button id="openMemoryModal" class="btn ghost" type="button">Memoria</button>
+      <button id="resetBoard" class="btn ghost" type="button">Reiniciar tablero</button>
+      <a class="btn" href="../../index.html#proyectos">Volver al portafolio</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="board-wrap">
+      <div class="board-header">
+        <div>
+          <h2>Flujo del trabajo</h2>
+          <div class="stats-inline">
+            <span><strong id="totalTasks">0</strong> tareas</span>
+            <span><strong id="doneTasks">0</strong> done</span>
+            <span><strong id="progressPercent">0%</strong> avance</span>
+          </div>
+        </div>
+        <input id="searchInput" type="search" placeholder="Filtrar por titulo o proyecto" aria-label="Filtrar tareas" />
+      </div>
+      <div id="board" class="board" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <div id="taskModal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="taskModalTitle">
+      <button class="modal-close" data-close-modal="taskModal" type="button" aria-label="Cerrar">x</button>
+      <h2 id="taskModalTitle">Nueva tarea</h2>
+      <form id="taskForm">
+        <label>
+          Titulo
+          <input id="title" name="title" maxlength="120" required placeholder="Ej: Finalizar defensa del trabajo de grado" />
+        </label>
+        <label>
+          Detalle
+          <textarea id="description" name="description" rows="3" placeholder="Notas o contexto"></textarea>
+        </label>
+        <label>
+          Proyecto
+          <input id="project" name="project" maxlength="80" placeholder="Tesis / Hospitalario / Navegacion" />
+        </label>
+        <div class="row">
+          <label>
+            Prioridad
+            <select id="priority" name="priority">
+              <option value="Alta">Alta</option>
+              <option value="Media" selected>Media</option>
+              <option value="Baja">Baja</option>
+            </select>
+          </label>
+          <label>
+            Story points
+            <input id="points" name="points" type="number" min="1" max="13" value="3" />
+          </label>
+        </div>
+        <label>
+          Columna inicial
+          <select id="column" name="column"></select>
+        </label>
+        <button class="btn" type="submit">Agregar tarea</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="memoryModal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="memoryModalTitle">
+      <button class="modal-close" data-close-modal="memoryModal" type="button" aria-label="Cerrar">x</button>
+      <h2 id="memoryModalTitle">Memoria</h2>
+      <p class="helper">Historial de cambios y tareas eliminadas. Todo queda guardado en este navegador.</p>
+
+      <section>
+        <h3>Historial reciente</h3>
+        <ul id="historyList" class="history-list"></ul>
+      </section>
+
+      <section>
+        <h3>Papelera</h3>
+        <ul id="trashList" class="trash-list"></ul>
+      </section>
+    </div>
+  </div>
+
+  <template id="taskTemplate">
+    <article class="task" draggable="true">
+      <header>
+        <h4 class="task-title"></h4>
+        <button class="icon-btn delete-btn" type="button" title="Eliminar tarea" aria-label="Eliminar tarea">x</button>
+      </header>
+      <p class="task-desc"></p>
+      <div class="tags">
+        <span class="tag project-tag"></span>
+        <span class="tag priority-tag"></span>
+        <span class="tag points-tag"></span>
+      </div>
+      <footer>
+        <button class="icon-btn edit-btn" type="button">Editar</button>
+      </footer>
+    </article>
+  </template>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

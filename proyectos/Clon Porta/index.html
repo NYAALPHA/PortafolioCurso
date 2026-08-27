@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería de proyectos digitales | Jhordy Camacho</title>
+<meta name="description" content="Galería visual de proyectos de diseño gráfico, creatividad digital e interfaces desarrollada por Jhordy Camacho." />
+<style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    /* Estilos del Contenedor Principal */
+    .slider-section {
+      width: 100%;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+ 
+    .slider-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 2rem;
+    }
+ 
+    /* Marco del Slider */
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      background-color: #000;
+    }
+ 
+    /* Pista que contiene las imágenes */
+    .slider-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+ 
+    /* Estilo de cada Diapositiva */
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+ 
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+ 
+    /* Texto o pie de foto opcional sobre la imagen */
+    .slide-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+      color: #fff;
+      font-size: 1.1rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+ 
+    /* Botones de Navegación Flechas */
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(5px);
+      color: white;
+      border: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s, transform 0.2s;
+      z-index: 10;
+    }
+ 
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.85);
+      color: #111;
+      transform: translateY(-50%) scale(1.1);
+    }
+ 
+    .prev-btn { left: 16px; }
+    .next-btn { right: 16px; }
+ 
+    /* Puntos Indicadores (Dots) */
+    .dots-container {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+ 
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+ 
+    .dot.active {
+      background: #fff;
+      width: 28px;
+      border-radius: 6px;
+    }
+ 
+    /* Adaptabilidad Móvil */
+    @media (max-width: 768px) {
+      .slider-container {
+        height: 320px;
+      }
+      .nav-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+      }
+    }
+</style>
+</head>
+<body>
+ 
+  <!-- SECCIÓN DEL SLIDER DE FOTOS -->
+<section class="slider-section">
+<h1>Galería de proyectos de diseño digital</h1>
+ 
+    <div class="slider-container" id="sliderContainer">
+<!-- Pista de diapositivas -->
+<div class="slider-track" id="sliderTrack">
+ 
+        <!-- Foto 1 -->
+<div class="slide">
+<img src="https://picsum.photos/id/1015/1200/600" alt="Paisaje natural utilizado como referencia visual para un proyecto de diseño digital">
+<div class="slide-caption">Paisajes Naturales - Proyecto 01</div>
+</div>
+ 
+        <!-- Foto 2 -->
+<div class="slide">
+<img src="https://picsum.photos/id/1018/1200/600" alt="Composición urbana y arquitectónica de una galería visual de diseño">
+<div class="slide-caption">Diseño Urbano & Arquitectura</div>
+</div>
+ 
+        <!-- Foto 3 -->
+<div class="slide">
+<img src="https://picsum.photos/id/1019/1200/600" alt="Entorno digital con estética de render 3D para exploración creativa">
+<div class="slide-caption">Entornos Digitales & Render 3D</div>
+</div>
+ 
+        <!-- Foto 4 -->
+<div class="slide">
+<img src="https://picsum.photos/id/1039/1200/600" alt="Ilustración conceptual que muestra creatividad y dirección visual">
+<div class="slide-caption">Concept Art & Ilustración</div>
+</div>
+ 
+      </div>
+ 
+      <!-- Controles Manuales -->
+<button class="nav-btn prev-btn" id="prevBtn" aria-label="Anterior">&#10094;</button>
+<button class="nav-btn next-btn" id="nextBtn" aria-label="Siguiente">&#10095;</button>
+ 
+      <!-- Puntos de posición -->
+<div class="dots-container" id="dotsContainer"></div>
+</div>
+</section>
+ 
+  <!-- LÓGICA JAVASCRIPT -->
+<script>
+    const track = document.getElementById('sliderTrack');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('dotsContainer');
+    const container = document.getElementById('sliderContainer');
+ 
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    const intervalTime = 3500; // Tiempo en milisegundos (3.5 segundos)
+    let slideInterval;
+ 
+    // 1. Generar puntos indicadores dinámicamente
+    slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+ 
+    const dots = document.querySelectorAll('.dot');
+ 
+    // 2. Función para actualizar la posición del slider y los puntos
+    function updateSlider() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+ 
+    // 3. Funciones para avanzar/retroceder (con bucle infinito)
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    }
+ 
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    }
+ 
+    function goToSlide(index) {
+      currentIndex = index;
+      updateSlider();
+    }
+ 
+    // 4. Iniciar y pausar el bucle automático
+    function startAutoplay() {
+      slideInterval = setInterval(nextSlide, intervalTime);
+    }
+ 
+    function stopAutoplay() {
+      clearInterval(slideInterval);
+    }
+ 
+    // Eventos de botones
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetTimer();
+    });
+ 
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetTimer();
+    });
+ 
+    // Pausar reproducción automática si el usuario pone el cursor encima
+    container.addEventListener('mouseenter', stopAutoplay);
+    container.addEventListener('mouseleave', startAutoplay);
+ 
+    // Reiniciar temporizador al interactuar
+    function resetTimer() {
+      stopAutoplay();
+      startAutoplay();
+    }
+ 
+    // Iniciar
+    startAutoplay();
+</script>
+</body>
+</html>
+ 

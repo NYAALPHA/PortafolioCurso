@@ -3,18 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portafolio — Base SPA</title>
+  <title>Jhordy Camacho | Diseñador gráfico, UX/UI y desarrollador web</title>
+  <meta name="description" content="Portafolio profesional de Jhordy Camacho: diseño gráfico, UX/UI, desarrollo web, branding e interfaces digitales centradas en la experiencia de usuario." />
+  <meta name="keywords" content="Jhordy Camacho, diseñador gráfico, diseño UX/UI, desarrollador web, branding, diseño digital, interfaces, creatividad digital, experiencia de usuario, proyectos digitales" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Jhordy Camacho" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jhordy Camacho | Diseño gráfico, UX/UI y desarrollo web" />
+  <meta property="og:description" content="Explora los proyectos digitales de Jhordy Camacho en diseño gráfico, UX/UI, branding y desarrollo web." />
+  <meta property="og:image" content="Foto_Perfil.jpg" />
   <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jhordy Camacho",
+      "jobTitle": "Diseñador gráfico, especialista UX/UI y desarrollador web",
+      "image": "Foto_Perfil.jpg",
+      "knowsAbout": ["Diseño gráfico", "UX/UI", "Branding", "Diseño digital", "Desarrollo web", "Interfaces digitales", "Experiencia de usuario"]
+    }
+    </script>
 </head>
 <body>
 <header class="container header" role="banner">
   <div style="display:flex;align-items:center;gap:12px">
-    <div class="brand">Mi Portafolio</div>
+    <div class="brand">Jhordy Camacho</div>
     <button class="hamburger" id="menuToggle" aria-label="Abrir menú">☰</button>
   </div>
-  <nav role="navigation" aria-label="Main navigation">
+  <nav role="navigation" aria-label="Navegación principal">
     <ul id="navList">
       <li><a href="#inicio" data-target="inicio" class="nav-link">INICIO</a></li>
+      <li><a href="#flipbook" data-target="flipbook" class="nav-link">FLIPBOOK</a></li>
       <li><a href="#proyectos" data-target="proyectos" class="nav-link">PROYECTOS</a></li>
       <li><a href="#certificados" data-target="certificados" class="nav-link">CERTIFICADOS</a></li>
     </ul>
@@ -24,6 +43,7 @@
     <a class="icon-btn" href="#" title="GitHub" aria-label="GitHub">G</a>
     <a class="icon-btn" href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
     <a class="icon-btn" href="#" title="Twitter" aria-label="Twitter">t</a>
+    <button class="icon-btn theme-toggle" id="themeToggle" type="button" title="Cambiar a modo claro" aria-label="Cambiar a modo claro">☀</button>
   </div>
 </header>
 
@@ -32,7 +52,10 @@
     <div class="hero card">
       <div class="profile-left">
         <div class="avatar" id="avatar">
-          <img alt="Foto de perfil" id="avatarImg" />
+          <div class="avatar-flipper" aria-live="off">
+            <img class="avatar-face avatar-front" src="Foto_Perfil.jpg" alt="Foto de perfil" id="avatarImg" />
+            <img class="avatar-face avatar-back" src="Foto_Perfil_Contraportada.jpeg" alt="" aria-hidden="true" />
+          </div>
         </div>
         <div class="name" id="profileName"></div>
         <div class="role" id="profileRole"></div>
@@ -42,44 +65,69 @@
         </div>
       </div>
       <div class="profile-right">
-        <h2 id="inicio-heading">Hola, soy <span id="introName"></span></h2>
+        <h1 id="inicio-heading">Hola, soy <span id="introName"></span></h1>
         <p id="profileBio"></p>
         <div style="margin-top:8px">
-          <strong style="color:var(--muted)">Habilidades clave:</strong>
+          <strong style="color:var(--muted)">Especialidades en diseño y desarrollo:</strong>
           <div id="skills" style="margin-top:8px;display:flex;flex-wrap:wrap;gap:8px"></div>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="flipbook" class="section" aria-labelledby="flipbook-heading">
+    <div class="flipbook-header">
+      <div>
+        <span class="eyebrow">REVISTA EDITORIAL</span>
+        <h2 id="flipbook-heading">Portafolio de diseño y desarrollo web</h2>
+      </div>
+      <div class="flipbook-controls" aria-label="Navegación del flipbook">
+        <button class="book-nav" type="button" data-page-direction="prev" aria-label="Página anterior">Anterior</button>
+        <button class="book-nav primary" type="button" data-page-direction="next" aria-label="Página siguiente">Siguiente</button>
+      </div>
+    </div>
+
+    <div class="editorial-book" id="editorialBook" aria-live="polite">
+      <div class="book-spine" aria-hidden="true"></div>
+      <article class="book-page page-left" id="bookLeftPage"></article>
+      <article class="book-page page-right" id="bookRightPage"></article>
+      <article class="book-page page-ghost" id="bookGhostPage"></article>
+    </div>
+  </section>
+
   <section id="proyectos" class="section" aria-labelledby="proyectos-heading">
-    <h3 id="proyectos-heading">Proyectos</h3>
-    <div class="grid" id="projectsGrid">
-      <article class="card-small">
-        <h4>Clon T</h4>
-        <p>Prototipo móvil de gestión de saldo, combos y consumo de datos.</p>
-        <a href="proyectos/Clon%20T/index.html">Abrir proyecto</a>
-      </article>
-      <article class="card-small">
-        <h4>Clon Youtube</h4>
-        <p>Interfaz tipo YouTube con videos, Shorts, búsqueda y filtros responsive.</p>
-        <a href="proyectos/Clon%20Youtube/index.html">Abrir proyecto</a>
-      </article>
+    <h2 id="proyectos-heading">Proyectos digitales seleccionados</h2>
+    <div class="project-tools" aria-label="Selector de vista de proyectos">
+      <span class="project-tools-label">Explorar proyectos</span>
+      <div class="view-selector" role="group" aria-label="Vista de proyectos">
+        <button class="view-option active" type="button" data-view-mode="carousel" aria-pressed="true">Vista Carrusel</button>
+        <button class="view-option" type="button" data-view-mode="list" aria-pressed="false">Vista Lista</button>
+      </div>
+    </div>
+    <div class="project-filters" id="projectFilters" role="group" aria-label="Filtrar proyectos"></div>
+    <div class="projects-carousel" aria-label="Carrusel de proyectos">
+      <button class="carousel-control carousel-prev" type="button" data-project-direction="prev" aria-label="Proyecto anterior">&#10094;</button>
+      <div class="projects-viewport">
+        <div class="projects-track" id="projectsGrid"></div>
+      </div>
+      <button class="carousel-control carousel-next" type="button" data-project-direction="next" aria-label="Proyecto siguiente">&#10095;</button>
     </div>
   </section>
 
   <section id="certificados" class="section" aria-labelledby="certificados-heading">
-    <h3 id="certificados-heading">Certificados</h3>
+    <h2 id="certificados-heading">Certificaciones profesionales</h2>
     <div id="certsList" class="grid"></div>
   </section>
 
   <section id="redes" class="section" aria-labelledby="redes-heading">
-    <h3 id="redes-heading">Redes Sociales</h3>
+    <h2 id="redes-heading">Redes profesionales</h2>
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px" id="socialList"></div>
   </section>
 </main>
 
-<footer class="footer" role="contentinfo">Plantilla base — Single Page Application minimal</footer>
+<footer class="footer" role="contentinfo">Portafolio profesional de Jhordy Camacho · Diseño gráfico, UX/UI y desarrollo web</footer>
+
+<div class="theme-transition" id="themeTransition" aria-hidden="true"></div>
 
 <script src="script.js" defer></script>
 </body>

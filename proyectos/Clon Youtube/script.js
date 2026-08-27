@@ -13,7 +13,7 @@
     const visibleChannels = state.showingAllChannels ? state.channels : state.channels.slice(0, 5)
     $('#channelList').innerHTML = visibleChannels.map((channel) => `
       <button class="subscription-item" type="button" data-channel="${escapeHtml(channel.name)}" aria-label="Ver videos de ${escapeHtml(channel.name)}">
-        <img class="subscription-logo" src="${channel.logo}" alt="">
+        <img class="subscription-logo" src="${channel.logo}" alt="Logotipo del canal ${escapeHtml(channel.name)}">
         <span class="subscription-name">${escapeHtml(channel.name)}</span>
         ${channel.hasNew ? '<span class="new-channel-dot" aria-label="Novedades"></span>' : ''}
       </button>

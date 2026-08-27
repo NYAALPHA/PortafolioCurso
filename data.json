@@ -1,19 +1,19 @@
 {
   "profile": {
-    "name": "Tu Nombre",
-    "role": "Ingeniero/a de Software",
-    "bio": "Soy un desarrollador con experiencia en construir aplicaciones web, APIs y sistemas escalables. Aquí muestro una selección de proyectos y certificaciones.",
-    "avatar": "",
-    "skills": ["JavaScript", "HTML", "CSS", "React", "Node.js"]
+    "name": "Jhordy Camacho",
+    "role": "Diseñador gráfico, especialista UX/UI y desarrollador web",
+    "bio": "Creo identidades visuales, interfaces digitales y experiencias web que combinan creatividad, claridad y funcionalidad. Este portafolio reúne proyectos de branding, diseño digital y desarrollo frontend.",
+    "avatar": "Foto_Perfil.jpg",
+    "skills": ["Diseño gráfico", "UX/UI", "Branding", "Diseño digital", "Desarrollo web", "Interfaces"]
   },
   "projects": [
-    {"title":"Clon T","description":"Prototipo móvil de gestión de saldo, combos y consumo de datos.","link":"proyectos/Clon%20T/index.html"},
-    {"title":"Clon Youtube","description":"Interfaz tipo YouTube con videos, Shorts, búsqueda y filtros responsive.","link":"proyectos/Clon%20Youtube/index.html"},
-    {"title":"Proyecto A","description":"Breve descripción del proyecto A.","link":"#"},
-    {"title":"Proyecto B","description":"Breve descripción del proyecto B.","link":"#"}
+    {"id":"clon-t","title":"Clon T","category":"Aplicación móvil","description":"Interfaz móvil para consultar saldo, administrar combos y visualizar el consumo de datos con una experiencia clara y responsive.","alt":"Interfaz móvil de gestión de saldo, combos y consumo de datos diseñada para Clon T","tags":["UX/UI","Mobile","Frontend"],"link":"proyectos/Clon%20T/index.html","image":"IMG/clon-t.png"},
+    {"id":"clon-youtube","title":"Clon YouTube","category":"Plataforma de contenido","description":"Interfaz responsive inspirada en YouTube con videos, Shorts, búsqueda y filtros para explorar contenido digital.","alt":"Interfaz responsive de plataforma de videos con secciones de YouTube, Shorts, búsqueda y filtros","tags":["UX/UI","Responsive","JavaScript"],"link":"proyectos/Clon%20Youtube/index.html","image":"IMG/clon-youtube.png"},
+    {"id":"trello-hibrido","title":"Trello Híbrido","category":"Gestión de productividad","description":"Aplicación de gestión de tareas con tablero Kanban y Scrum, persistencia local e historial de actividad.","alt":"Tablero digital de gestión de tareas con flujo Kanban y Scrum en Trello Híbrido","tags":["Productividad","Kanban","JavaScript"],"link":"proyectos/Trello-Hibrido/index.html","image":"IMG/trello-hibrido.png"},
+    {"id":"clon-whatsapp-chats","title":"Clon WhatsApp Chats","category":"Mensajería digital","description":"Interfaz de chats con lista de conversaciones, filtros y actualización visual en tiempo real para una experiencia de mensajería familiar.","alt":"Interfaz de mensajería con lista de conversaciones y filtros inspirada en WhatsApp","tags":["UX/UI","Responsive","JavaScript"],"link":"proyectos/Clon%20WhatsApp%20Chats/index.html","image":"IMG/clon-whatsapp-chats.png"}
   ],
   "certificates": [
-    {"title":"Certificado X","issuer":"Entidad Y","year":"2024","link":"#"}
+    {"title":"Certificaciones y formación en diseño digital","issuer":"Información disponible bajo solicitud","year":"2024","link":"#"}
   ],
   "socials":[
     {"name":"GitHub","url":"#"},

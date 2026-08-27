@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clon WhatsApp - Lista de chats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wa-shell" role="main" aria-label="Vista principal de WhatsApp">
+    <aside class="sidebar" aria-label="Lista de chats">
+      <header class="sidebar-head">
+        <h1>Chats</h1>
+        <button class="ghost-btn" id="newChatBtn" aria-label="Nuevo chat">+</button>
+      </header>
+
+      <label class="search-wrap" for="searchInput">
+        <span aria-hidden="true">Buscar</span>
+        <input id="searchInput" type="search" placeholder="Buscar un chat o iniciar uno nuevo" autocomplete="off" />
+      </label>
+
+      <div class="filters" id="filters" role="tablist" aria-label="Filtros de chat"></div>
+      <div class="chat-list" id="chatList" role="list"></div>
+    </aside>
+
+    <section class="chat-view" aria-label="Vista de conversacion">
+      <div class="chat-view-head" id="chatHead">
+        <div>
+          <h2 id="chatTitle">Selecciona un chat</h2>
+          <p id="chatStatus">Haz clic en una fila para ver el cambio visual dinamico.</p>
+        </div>
+      </div>
+      <div class="chat-pattern" aria-hidden="true"></div>
+      <div class="chat-preview" id="chatPreview"></div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
