@@ -1,10 +1,10 @@
 {
   "profile": {
     "name": "Andres Romero",
-    "role": "Estudiante de Ingeniería de Software y desarrollador frontend",
-    "bio": "Soy estudiante de Ingeniería de Software y desarrollo aplicaciones web con JavaScript, HTML y CSS. Me interesa resolver problemas mediante código, crear interfaces funcionales y seguir aprendiendo buenas prácticas de desarrollo.",
+    "role": "Estudiante de Ingeniería de Software",
+    "bio": "Soy estudiante de Ingeniería de Software interesado en analizar problemas, construir soluciones mediante código y comprender cada etapa de un proyecto tecnológico. Este portafolio reúne mis proyectos y avances en programación, desarrollo de aplicaciones y diseño de interfaces funcionales.",
     "avatar": "Foto_Perfil.jpg",
-    "skills": ["JavaScript", "HTML y CSS", "Desarrollo frontend", "Aplicaciones web", "Diseño responsive", "Lógica de programación"]
+    "skills": ["Programación", "Lógica computacional", "JavaScript", "Aplicaciones digitales", "Interfaces y usabilidad", "Resolución de problemas"]
   },
   "projects": [
     {"id":"clon-t","title":"Clon T","category":"Aplicación móvil","description":"Interfaz móvil para consultar saldo, administrar combos y visualizar el consumo de datos con una experiencia clara y responsive.","alt":"Interfaz móvil de gestión de saldo, combos y consumo de datos diseñada para Clon T","tags":["UX/UI","Mobile","Frontend"],"link":"proyectos/Clon%20T/index.html","image":"IMG/clon-t.png"},

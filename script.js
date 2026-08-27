@@ -74,10 +74,10 @@
       return {
         profile: {
           name: 'Andres Romero',
-          role: 'Estudiante de Ingeniería de Software y desarrollador frontend',
-          bio: 'Soy estudiante de Ingeniería de Software y desarrollo aplicaciones web con JavaScript, HTML y CSS.',
+          role: 'Estudiante de Ingeniería de Software',
+          bio: 'Soy estudiante de Ingeniería de Software interesado en analizar problemas y construir soluciones mediante código.',
           avatar: 'Foto_Perfil.jpg',
-          skills: ['JavaScript', 'HTML y CSS', 'Desarrollo frontend', 'Aplicaciones web', 'Diseño responsive', 'Lógica de programación']
+          skills: ['Programación', 'Lógica computacional', 'JavaScript', 'Aplicaciones digitales', 'Interfaces y usabilidad', 'Resolución de problemas']
         },
         projects: [
           {
@@ -356,8 +356,8 @@
       kicker: '02 · Concepto',
       title: 'Interfaces que resuelven',
       text: 'Cada proyecto parte de una necesidad concreta y se transforma en una interfaz clara, responsive y usable mediante estructura HTML, estilos CSS y lógica JavaScript.',
-      tags: ['HTML', 'CSS', 'JavaScript'],
-      author: 'Desarrollo web'
+      tags: ['Código', 'Estructura', 'JavaScript'],
+      author: 'Construcción de software'
     },
     {
       kicker: '03 · Experiencia',
@@ -370,7 +370,7 @@
       kicker: '04 · Proyectos',
       title: 'Código en evolución',
       text: 'Cada entrega representa una etapa de aprendizaje: analizar el problema, implementar una solución, probarla en distintos tamaños de pantalla y mejorarla con cada iteración.',
-      tags: ['Frontend', 'Responsive', 'Iteración'],
+      tags: ['Software', 'Iteración', 'Aprendizaje'],
       author: 'Caso de estudio'
     }
   ]
