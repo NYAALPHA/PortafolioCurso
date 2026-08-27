@@ -1,10 +1,10 @@
 {
   "profile": {
     "name": "Andres Romero",
-    "role": "Diseñador gráfico, especialista UX/UI y desarrollador web",
-    "bio": "Creo identidades visuales, interfaces digitales y experiencias web que combinan creatividad, claridad y funcionalidad. Este portafolio reúne proyectos de branding, diseño digital y desarrollo frontend.",
+    "role": "Estudiante de Ingeniería de Software y desarrollador frontend",
+    "bio": "Soy estudiante de Ingeniería de Software y desarrollo aplicaciones web con JavaScript, HTML y CSS. Me interesa resolver problemas mediante código, crear interfaces funcionales y seguir aprendiendo buenas prácticas de desarrollo.",
     "avatar": "Foto_Perfil.jpg",
-    "skills": ["Diseño gráfico", "UX/UI", "Branding", "Diseño digital", "Desarrollo web", "Interfaces"]
+    "skills": ["JavaScript", "HTML y CSS", "Desarrollo frontend", "Aplicaciones web", "Diseño responsive", "Lógica de programación"]
   },
   "projects": [
     {"id":"clon-t","title":"Clon T","category":"Aplicación móvil","description":"Interfaz móvil para consultar saldo, administrar combos y visualizar el consumo de datos con una experiencia clara y responsive.","alt":"Interfaz móvil de gestión de saldo, combos y consumo de datos diseñada para Clon T","tags":["UX/UI","Mobile","Frontend"],"link":"proyectos/Clon%20T/index.html","image":"IMG/clon-t.png"},
@@ -13,7 +13,7 @@
     {"id":"clon-whatsapp-chats","title":"Clon WhatsApp Chats","category":"Mensajería digital","description":"Interfaz de chats con lista de conversaciones, filtros y actualización visual en tiempo real para una experiencia de mensajería familiar.","alt":"Interfaz de mensajería con lista de conversaciones y filtros inspirada en WhatsApp","tags":["UX/UI","Responsive","JavaScript"],"link":"proyectos/Clon%20WhatsApp%20Chats/index.html","image":"IMG/clon-whatsapp-chats.png"}
   ],
   "certificates": [
-    {"title":"Certificaciones y formación en diseño digital","issuer":"Información disponible bajo solicitud","year":"2024","link":"#"}
+    {"title":"Formación en Ingeniería de Software","issuer":"Estudiante en formación","year":"En curso","link":"#"}
   ],
   "socials":[
     {"name":"GitHub","url":"#"},

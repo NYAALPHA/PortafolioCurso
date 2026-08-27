@@ -74,10 +74,10 @@
       return {
         profile: {
           name: 'Andres Romero',
-          role: 'Diseñador gráfico, especialista UX/UI y desarrollador web',
-          bio: 'Creo identidades visuales, interfaces digitales y experiencias web que combinan creatividad, claridad y funcionalidad.',
+          role: 'Estudiante de Ingeniería de Software y desarrollador frontend',
+          bio: 'Soy estudiante de Ingeniería de Software y desarrollo aplicaciones web con JavaScript, HTML y CSS.',
           avatar: 'Foto_Perfil.jpg',
-          skills: ['Diseño gráfico', 'UX/UI', 'Branding', 'Diseño digital', 'Desarrollo web', 'Interfaces']
+          skills: ['JavaScript', 'HTML y CSS', 'Desarrollo frontend', 'Aplicaciones web', 'Diseño responsive', 'Lógica de programación']
         },
         projects: [
           {
@@ -347,31 +347,31 @@
   const flipbookPages = [
     {
       kicker: '01 · Portada',
-      title: 'Diseño editorial premium',
-      text: 'Una lectura más lenta, más táctil y más memorable, con un enfoque visual que convierte cada proyecto en una experiencia de libro abierto.',
-      tags: ['UI', 'UX', 'Brand'],
-      author: 'Portfolio'
+      title: 'Aprender construyendo software',
+      text: 'Este portafolio reúne proyectos desarrollados durante mi formación en Ingeniería de Software, con foco en resolver problemas y convertir ideas en aplicaciones web funcionales.',
+      tags: ['Software', 'Frontend', 'Aprendizaje'],
+      author: 'Andres Romero'
     },
     {
       kicker: '02 · Concepto',
-      title: 'Páginas con profundidad',
-      text: 'La hoja activa aparece nítida y enfocada, mientras las secciones adyacentes se atenúan para recrear una composición de libro real y elegante.',
-      tags: ['Layout', 'Editorial', 'Motion'],
-      author: 'Visual design'
+      title: 'Interfaces que resuelven',
+      text: 'Cada proyecto parte de una necesidad concreta y se transforma en una interfaz clara, responsive y usable mediante estructura HTML, estilos CSS y lógica JavaScript.',
+      tags: ['HTML', 'CSS', 'JavaScript'],
+      author: 'Desarrollo web'
     },
     {
       kicker: '03 · Experiencia',
-      title: 'Gesto táctil y giro real',
-      text: 'Arrastra horizontalmente para seguir la página, con un umbral que decide si se pasa la hoja o vuelve a su posición original con suavidad.',
-      tags: ['Touch', 'Drag', '3D'],
-      author: 'Interaction'
+      title: 'Lógica, estado y persistencia',
+      text: 'Los proyectos exploran interacciones, filtros, navegación, manejo de estado y persistencia local para practicar conceptos esenciales de la construcción de software.',
+      tags: ['Lógica', 'Estado', 'LocalStorage'],
+      author: 'Ingeniería de Software'
     },
     {
       kicker: '04 · Proyectos',
-      title: 'Trabajo tangible y claro',
-      text: 'Cada entrega se presenta como un spread legible, donde el contenido toma forma con claridad, equilibrio y una sensación de lectura auténtica.',
-      tags: ['Frontend', 'Code', 'Story'],
-      author: 'Case study'
+      title: 'Código en evolución',
+      text: 'Cada entrega representa una etapa de aprendizaje: analizar el problema, implementar una solución, probarla en distintos tamaños de pantalla y mejorarla con cada iteración.',
+      tags: ['Frontend', 'Responsive', 'Iteración'],
+      author: 'Caso de estudio'
     }
   ]
 
