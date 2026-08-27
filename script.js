@@ -73,7 +73,7 @@
       // Permite revisar el portafolio aunque index.html se abra directamente
       return {
         profile: {
-          name: 'Jhordy Camacho',
+          name: 'Andres Romero',
           role: 'Diseñador gráfico, especialista UX/UI y desarrollador web',
           bio: 'Creo identidades visuales, interfaces digitales y experiencias web que combinan creatividad, claridad y funcionalidad.',
           avatar: 'Foto_Perfil.jpg',
@@ -214,7 +214,7 @@
         const image = document.createElement('img')
         image.className = 'project-image'
         image.src = p.image
-        image.alt = p.alt || `Vista previa del proyecto digital ${p.title} de Jhordy Camacho`
+        image.alt = p.alt || `Vista previa del proyecto digital ${p.title} de Andres Romero`
         card.appendChild(image)
       }
       const content = document.createElement('div')
@@ -259,7 +259,7 @@
         const image = document.createElement('img')
         image.className = 'project-list-image'
         image.src = p.image
-        image.alt = p.alt || `Vista previa del proyecto digital ${p.title} de Jhordy Camacho`
+        image.alt = p.alt || `Vista previa del proyecto digital ${p.title} de Andres Romero`
         image.loading = 'lazy'
         card.appendChild(image)
       }
