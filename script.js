@@ -752,8 +752,6 @@
     }, {passive:true})
   }
 
-  qs('#contactBtn').addEventListener('click', ()=>{ location.href = 'mailto:tu@correo.com' })
-  qs('#downloadCv').addEventListener('click', ()=>{ alert('Enlaza aquí tu CV o genera dinámicamente el PDF') })
   qs('#themeToggle').addEventListener('click', ()=>{
     transitionTheme()
   })
