@@ -709,14 +709,48 @@
     book.addEventListener('pointerleave', handlePointerUp)
     book.addEventListener('pointercancel', handlePointerUp)
   }
-  document.getElementById('menuToggle').addEventListener('click', ()=>{
-    const nav = document.getElementById('navList')
-    nav.style.display = nav.style.display==='flex'?'none':'flex'
-    nav.style.flexDirection = 'column'
-    nav.style.background = 'rgba(0,0,0,0.35)'
-    nav.style.padding = '8px'
-    nav.style.borderRadius = '8px'
+  // ── Mobile nav overlay ──
+  const navList = document.getElementById('navList')
+  const navCloseBtn = document.getElementById('navClose')
+  function openMobileNav(){
+    navList.classList.add('mobile-open')
+    navCloseBtn.classList.add('is-visible')
+    document.body.style.overflow = 'hidden'
+  }
+  function closeMobileNav(){
+    navList.classList.remove('mobile-open')
+    navCloseBtn.classList.remove('is-visible')
+    document.body.style.overflow = ''
+    navList.style.display = ''
+    navList.style.flexDirection = ''
+    navList.style.background = ''
+    navList.style.padding = ''
+    navList.style.borderRadius = ''
+  }
+  document.getElementById('menuToggle').addEventListener('click', openMobileNav)
+  navCloseBtn.addEventListener('click', closeMobileNav)
+  navList.addEventListener('click', (e)=>{
+    if(e.target.closest('a[data-target]')) closeMobileNav()
   })
+
+  // ── Touch swipe for project carousel ──
+  let projectSwipe = { active:false, startX:0 }
+  const projectsCarousel = qs('.projects-carousel')
+  if(projectsCarousel){
+    projectsCarousel.addEventListener('touchstart', (e)=>{
+      if(viewMode !== 'carousel') return
+      projectSwipe.active = true
+      projectSwipe.startX = e.touches[0].clientX
+    }, {passive:true})
+    projectsCarousel.addEventListener('touchend', (e)=>{
+      if(!projectSwipe.active) return
+      const dx = e.changedTouches[0].clientX - projectSwipe.startX
+      projectSwipe.active = false
+      if(Math.abs(dx) > 50){
+        moveProjectCarousel(dx < 0 ? 1 : -1)
+      }
+    }, {passive:true})
+  }
 
   qs('#contactBtn').addEventListener('click', ()=>{ location.href = 'mailto:tu@correo.com' })
   qs('#downloadCv').addEventListener('click', ()=>{ alert('Enlaza aquí tu CV o genera dinámicamente el PDF') })
