@@ -77,7 +77,7 @@
           role: 'Estudiante de Ingeniería de Software',
           bio: 'Soy estudiante de Ingeniería de Software interesado en analizar problemas y construir soluciones mediante código.',
           avatar: 'Foto_Perfil.jpg',
-          skills: ['Programación', 'Lógica computacional', 'JavaScript', 'Aplicaciones digitales', 'Interfaces y usabilidad', 'Resolución de problemas']
+          skills: ['Programación', 'Desarrollo de Software', 'DevSecOps', 'DevOps', 'Integración de IA', 'Bases de datos', 'Ciencia de datos']
         },
         projects: [
           {
@@ -121,7 +121,40 @@
             image: 'IMG/clon-whatsapp-chats.png'
           }
         ],
-        certificates: [],
+        certificates: [
+          {
+            title: "Amenazas del Phishing",
+            issuer: "Curso / Taller",
+            year: "Reciente",
+            link: "Certificados/Amenazas%20del%20Pishing.jpg",
+            image: "Certificados/Amenazas%20del%20Pishing.jpg",
+            isPdf: false
+          },
+          {
+            title: "Análisis e interpretación de datos",
+            issuer: "Curso / Taller",
+            year: "Reciente",
+            link: "Certificados/Analisis%20e%20interpretacion%20de%20datos.pdf",
+            image: "",
+            isPdf: true
+          },
+          {
+            title: "Curador de datos",
+            issuer: "Curso / Taller",
+            year: "Reciente",
+            link: "Certificados/Curador%20de%20datos.pdf",
+            image: "",
+            isPdf: true
+          },
+          {
+            title: "Prevención de la desnutrición",
+            issuer: "Proyecto Integral",
+            year: "Reciente",
+            link: "Certificados/PROYECTO%20INTEGRAL%20DE%20PREVENCI%C3%93N%20DE%20LA%20DESNUTRICI%C3%93N.pdf",
+            image: "",
+            isPdf: true
+          }
+        ],
         socials: []
       }
     }
@@ -320,10 +353,39 @@
   function renderCerts(data){
     const list = qs('#certsList')
     list.innerHTML = '';
+    list.classList.add('certs-grid'); // Added a specific class for the grid
     (data.certificates||[]).forEach(c=>{
       const card = document.createElement('div')
-      card.className='card-small'
-      card.innerHTML = `<strong>${c.title}</strong><div style="color:var(--muted);margin-top:6px">${c.issuer} • ${c.year}</div>`
+      card.className='cert-card'
+      
+      const previewHtml = c.isPdf 
+        ? `<div class="cert-preview pdf-preview">
+             <svg class="pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+               <polyline points="14 2 14 8 20 8"></polyline>
+               <line x1="16" y1="13" x2="8" y2="13"></line>
+               <line x1="16" y1="17" x2="8" y2="17"></line>
+               <polyline points="10 9 9 9 8 9"></polyline>
+             </svg>
+           </div>`
+        : `<div class="cert-preview"><img src="${c.image}" alt="Vista previa de ${c.title}" loading="lazy" /></div>`;
+        
+      card.innerHTML = `
+        ${previewHtml}
+        <div class="cert-content">
+          <h4 class="cert-title">${c.title}</h4>
+          <div class="cert-footer">
+            <div class="cert-issuer">${c.issuer}</div>
+            <a href="${c.link}" class="cert-download" download title="Descargar ${c.title}" aria-label="Descargar ${c.title}">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      `;
       list.appendChild(card)
     })
   }
@@ -661,6 +723,20 @@
   qs('#themeToggle').addEventListener('click', ()=>{
     transitionTheme()
   })
+
+  const fabToggle = qs('#fabToggle')
+  const fabMenu = qs('#fabMenu')
+  if(fabToggle && fabMenu){
+    fabToggle.addEventListener('click', (e)=>{
+      e.stopPropagation()
+      fabMenu.classList.toggle('is-active')
+    })
+    document.addEventListener('click', (e)=>{
+      if(!fabMenu.contains(e.target) && !fabToggle.contains(e.target)){
+        fabMenu.classList.remove('is-active')
+      }
+    })
+  }
 
   setTheme(localStorage.getItem('portfolio-theme') === 'light' ? 'light' : 'dark')
 

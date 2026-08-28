@@ -4,7 +4,7 @@
     "role": "Estudiante de Ingeniería de Software",
     "bio": "Soy estudiante de Ingeniería de Software interesado en analizar problemas, construir soluciones mediante código y comprender cada etapa de un proyecto tecnológico. Este portafolio reúne mis proyectos y avances en programación, desarrollo de aplicaciones y diseño de interfaces funcionales.",
     "avatar": "Foto_Perfil.jpg",
-    "skills": ["Programación", "Lógica computacional", "JavaScript", "Aplicaciones digitales", "Interfaces y usabilidad", "Resolución de problemas"]
+    "skills": ["Programación", "Desarrollo de Software", "DevSecOps", "DevOps", "Integración de IA", "Bases de datos", "Ciencia de datos"]
   },
   "projects": [
     {"id":"clon-t","title":"Clon T","category":"Aplicación móvil","description":"Interfaz móvil para consultar saldo, administrar combos y visualizar el consumo de datos con una experiencia clara y responsive.","alt":"Interfaz móvil de gestión de saldo, combos y consumo de datos diseñada para Clon T","tags":["UX/UI","Mobile","Frontend"],"link":"proyectos/Clon%20T/index.html","image":"IMG/clon-t.png"},
@@ -13,7 +13,38 @@
     {"id":"clon-whatsapp-chats","title":"Clon WhatsApp Chats","category":"Mensajería digital","description":"Interfaz de chats con lista de conversaciones, filtros y actualización visual en tiempo real para una experiencia de mensajería familiar.","alt":"Interfaz de mensajería con lista de conversaciones y filtros inspirada en WhatsApp","tags":["UX/UI","Responsive","JavaScript"],"link":"proyectos/Clon%20WhatsApp%20Chats/index.html","image":"IMG/clon-whatsapp-chats.png"}
   ],
   "certificates": [
-    {"title":"Formación en Ingeniería de Software","issuer":"Estudiante en formación","year":"En curso","link":"#"}
+    {
+      "title": "Amenazas del Phishing",
+      "issuer": "Curso / Taller",
+      "year": "Reciente",
+      "link": "Certificados/Amenazas%20del%20Pishing.jpg",
+      "image": "Certificados/Amenazas%20del%20Pishing.jpg",
+      "isPdf": false
+    },
+    {
+      "title": "Análisis e interpretación de datos",
+      "issuer": "Curso / Taller",
+      "year": "Reciente",
+      "link": "Certificados/Analisis%20e%20interpretacion%20de%20datos.pdf",
+      "image": "",
+      "isPdf": true
+    },
+    {
+      "title": "Curador de datos",
+      "issuer": "Curso / Taller",
+      "year": "Reciente",
+      "link": "Certificados/Curador%20de%20datos.pdf",
+      "image": "",
+      "isPdf": true
+    },
+    {
+      "title": "Prevención de la desnutrición",
+      "issuer": "Proyecto Integral",
+      "year": "Reciente",
+      "link": "Certificados/PROYECTO%20INTEGRAL%20DE%20PREVENCI%C3%93N%20DE%20LA%20DESNUTRICI%C3%93N.pdf",
+      "image": "",
+      "isPdf": true
+    }
   ],
   "socials":[
     {"name":"GitHub","url":"#"},
